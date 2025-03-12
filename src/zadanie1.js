@@ -53,14 +53,14 @@ function main() {
         rl.question('Введите пароль: ', (password) => {
             function success(login) {
                 console.log(`Привет, ${login}!`);
-                rl.close(); // Закрываем интерфейс readline
+                rl.close(); 
             }
 
             function failure(login, errorMessage) {
                 console.log(
                     `Кто-то пытался притвориться пользователем ${login}, но в пароле допустил ошибку: ${errorMessage.toUpperCase()}.`
                 );
-                rl.close(); // Закрываем интерфейс readline
+                rl.close(); 
             }
 
             ask_password(login, password, success, failure);
